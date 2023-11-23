@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "1ac7186122f57acd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0efe2ba67c2a30c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "281b37b4e4e7c09b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "924d4becf5e0f46f",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca9a46d09a79ff1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fbd7b820c2e9e11c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c8ea3bc0d497e10b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8fb8010078691743",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "03be8f10948a8b98",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbdea8116741e433",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4da600824c62a7cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "caf17090461657e9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "19572fac3f7a14a1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d7736ab82405b2de",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "281b37b4e4e7c09b",
+  "lastOpenFiles": [
+    "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+    "정렬 알고리즘/선택 정렬.md",
+    "정렬 알고리즘/삽입 정렬.md",
+    "정렬 알고리즘/분할 정복.md",
+    "정렬 알고리즘/병합 정렬.md",
+    "정렬 알고리즘/버블 정렬.md",
+    "정렬 알고리즘",
+    "정렬",
+    "untitled folder",
+    "버블 정렬.md",
+    "병합 정렬.md",
+    "분할 정복.md",
+    "삽입 정렬.md",
+    "선택 정렬.md"
+  ]
+}
