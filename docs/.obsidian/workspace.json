@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "281b37b4e4e7c09b",
+            "id": "650b179f985c8297",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "file": "그리디 알고리즘/그리디 알고리즘.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "03be8f10948a8b98",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "file": "그리디 알고리즘/그리디 알고리즘.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+                "file": "그리디 알고리즘/그리디 알고리즘.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md"
+                "file": "그리디 알고리즘/그리디 알고리즘.md"
               }
             }
           }
@@ -147,8 +146,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "281b37b4e4e7c09b",
+  "active": "650b179f985c8297",
   "lastOpenFiles": [
+    "무제 파일.md",
+    "그리디 알고리즘/그리디 알고리즘.md",
+    "그리디 알고리즘",
     "정렬 알고리즘/Javascript 정렬 라이브러리.md",
     "정렬 알고리즘/선택 정렬.md",
     "정렬 알고리즘/삽입 정렬.md",
