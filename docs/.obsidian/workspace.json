@@ -11,11 +11,9 @@
             "id": "650b179f985c8297",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "그리디 알고리즘/그리디 알고리즘.md",
-                "mode": "source",
-                "source": false
+                "file": "N-Queen.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "그리디 알고리즘/그리디 알고리즘.md",
+                "file": "N-Queen.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "그리디 알고리즘/그리디 알고리즘.md",
+                "file": "N-Queen.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "그리디 알고리즘/그리디 알고리즘.md"
+                "file": "N-Queen.png"
               }
             }
           }
@@ -148,8 +146,12 @@
   },
   "active": "650b179f985c8297",
   "lastOpenFiles": [
-    "무제 파일.md",
+    "백트래킹/N-Queen 문제.md",
+    "백트래킹/백트래킹 알고리즘.md",
     "그리디 알고리즘/그리디 알고리즘.md",
+    "체스 보드.png",
+    "N-Queen.png",
+    "백트래킹",
     "그리디 알고리즘",
     "정렬 알고리즘/Javascript 정렬 라이브러리.md",
     "정렬 알고리즘/선택 정렬.md",
