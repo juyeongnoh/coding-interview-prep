@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f0efe2ba67c2a30c",
+        "id": "6b5cd2b3aafb0709",
         "type": "tabs",
         "children": [
           {
-            "id": "650b179f985c8297",
+            "id": "e8e6a5bd11627272",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "N-Queen.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -83,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "N-Queen.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "N-Queen.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "N-Queen.png"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,13 +138,13 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "650b179f985c8297",
+  "active": "e8e6a5bd11627272",
   "lastOpenFiles": [
     "백트래킹/N-Queen 문제.md",
+    "N-Queen.png",
     "백트래킹/백트래킹 알고리즘.md",
     "그리디 알고리즘/그리디 알고리즘.md",
     "체스 보드.png",
-    "N-Queen.png",
     "백트래킹",
     "그리디 알고리즘",
     "정렬 알고리즘/Javascript 정렬 라이브러리.md",
