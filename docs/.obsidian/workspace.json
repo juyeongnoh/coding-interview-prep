@@ -11,9 +11,11 @@
             "id": "e8e6a5bd11627272",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "체스 보드.png"
+                "file": "그리디 알고리즘/(1946) 신입 사원.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "03be8f10948a8b98",
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "체스 보드.png",
+                "file": "그리디 알고리즘/(1946) 신입 사원.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "체스 보드.png",
+                "file": "그리디 알고리즘/(1946) 신입 사원.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "체스 보드.png"
+                "file": "그리디 알고리즘/(1946) 신입 사원.md"
               }
             }
           }
@@ -146,11 +149,12 @@
   },
   "active": "e8e6a5bd11627272",
   "lastOpenFiles": [
+    "그리디 알고리즘/그리디 알고리즘.md",
+    "그리디 알고리즘/(1946) 신입 사원.md",
+    "체스 보드.png",
     "N-Queen.png",
     "백트래킹/N-Queen 문제.md",
     "백트래킹/백트래킹 알고리즘.md",
-    "그리디 알고리즘/그리디 알고리즘.md",
-    "체스 보드.png",
     "백트래킹",
     "그리디 알고리즘",
     "정렬 알고리즘/Javascript 정렬 라이브러리.md",
