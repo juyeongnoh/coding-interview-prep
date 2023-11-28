@@ -11,8 +11,10 @@
             "id": "e8e6a5bd11627272",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "image",
+              "state": {
+                "file": "체스 보드.png"
+              }
             }
           }
         ]
@@ -81,6 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "체스 보드.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "체스 보드.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "체스 보드.png"
+              }
             }
           }
         ]
@@ -140,8 +146,8 @@
   },
   "active": "e8e6a5bd11627272",
   "lastOpenFiles": [
-    "백트래킹/N-Queen 문제.md",
     "N-Queen.png",
+    "백트래킹/N-Queen 문제.md",
     "백트래킹/백트래킹 알고리즘.md",
     "그리디 알고리즘/그리디 알고리즘.md",
     "체스 보드.png",
