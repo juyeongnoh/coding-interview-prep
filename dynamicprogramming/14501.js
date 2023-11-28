@@ -16,7 +16,6 @@ for (let i = 0; i < n; i++) {
   if (i + duration > n) continue;
   dp[i] += profit;
   for (let j = i + duration; j < n; j++) {
-    console.log(dp[j], dp[i]);
     dp[j] = Math.max(dp[j], dp[i]);
   }
 }
