@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6b5cd2b3aafb0709",
+        "id": "24ca9a7caf48fd92",
         "type": "tabs",
         "children": [
           {
-            "id": "e8e6a5bd11627272",
+            "id": "621d34414ce52d91",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "03be8f10948a8b98",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,10 +138,13 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "e8e6a5bd11627272",
+  "active": "621d34414ce52d91",
   "lastOpenFiles": [
-    "그리디 알고리즘/그리디 알고리즘.md",
     "그리디 알고리즘/(1946) 신입 사원.md",
+    "대동 맛지도.md",
+    "Screenshot 2023-11-28 at 10.38.25 PM.png",
+    "Screenshot 2023-11-28 at 10.36.23 PM.png",
+    "그리디 알고리즘/그리디 알고리즘.md",
     "체스 보드.png",
     "N-Queen.png",
     "백트래킹/N-Queen 문제.md",
