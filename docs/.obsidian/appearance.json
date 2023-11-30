@@ -1,3 +1,7 @@
 {
-  "accentColor": ""
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "Pretendard",
+  "monospaceFontFamily": "D2Coding ligature",
+  "theme": "obsidian"
 }
