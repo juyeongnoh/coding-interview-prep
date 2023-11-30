@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md",
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "그리디 알고리즘/(1946) 신입 사원.md"
+                "file": "정렬 알고리즘/Javascript 정렬 라이브러리.md"
               }
             }
           }
@@ -148,25 +148,26 @@
   },
   "active": "621d34414ce52d91",
   "lastOpenFiles": [
-    "무제 파일.md",
-    "자바스크립트 문법",
     "그리디 알고리즘/(1946) 신입 사원.md",
+    "정렬 알고리즘/Javascript 정렬 라이브러리.md",
+    "그리디 알고리즘/(13305) 주유소.md",
+    "자바스크립트 문법/BigInt.md",
+    "정렬 알고리즘/선택 정렬.md",
+    "정렬 알고리즘/삽입 정렬.md",
+    "백트래킹/백트래킹 알고리즘.md",
+    "정렬 알고리즘/분할 정복.md",
+    "정렬 알고리즘/병합 정렬.md",
+    "정렬 알고리즘/버블 정렬.md",
+    "백트래킹/N-Queen 문제.md",
+    "자바스크립트 문법",
     "그리디 알고리즘/그리디 알고리즘.md",
     "대동 맛지도.md",
     "Screenshot 2023-11-28 at 10.38.25 PM.png",
     "Screenshot 2023-11-28 at 10.36.23 PM.png",
     "체스 보드.png",
     "N-Queen.png",
-    "백트래킹/N-Queen 문제.md",
-    "백트래킹/백트래킹 알고리즘.md",
     "백트래킹",
     "그리디 알고리즘",
-    "정렬 알고리즘/Javascript 정렬 라이브러리.md",
-    "정렬 알고리즘/선택 정렬.md",
-    "정렬 알고리즘/삽입 정렬.md",
-    "정렬 알고리즘/분할 정복.md",
-    "정렬 알고리즘/병합 정렬.md",
-    "정렬 알고리즘/버블 정렬.md",
     "정렬 알고리즘",
     "정렬",
     "untitled folder",
