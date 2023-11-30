@@ -1,31 +1,27 @@
 /**
  * 주유소
+ * https://www.acmicpc.net/problem/13305
  */
 
-let [cities, distance, price] = require("fs")
+let [n, km, cost] = require("fs")
   .readFileSync("dev/stdin")
   .toString()
   .trim()
   .split("\n")
-  .map((l) => l.split(" ").map(Number));
+  .map((el) => el.split(" ").map(Number));
 
-console.log(cities, distance, price);
+n = n[0];
 
-cost = distance[0] * price[0];
-console.log(cost);
+let minValue = cost[0];
+let answer = BigInt(0);
 
-// for (let i = 1; i < cities; i++) {
-//   // check next node
-//   // if next node is more expensive, check next node and see if it's more expensive
-
-//   let j = i + 1;
-//   for (; j < cities; j++) {
-//     if (price[i] > price[j]) break;
-//   }
-
-  
-// }
-
-for (let i = 1; i < cities; i++) {
-  cost += 
+for (let i = 0; i < cost.length; i++) {
+  if (cost[i] < minValue) minValue = cost[i];
+  cost[i] = minValue;
 }
+
+for (let i = 0; i < km.length; i++) {
+  answer += BigInt(km[i] * cost[i]);
+}
+
+console.log(String(answer));
