@@ -1,6 +1,6 @@
 /**
- * X보다 작은 수
- * https://www.acmicpc.net/problem/10871
+ * 공 넣기
+ * https://www.acmicpc.net/problem/10810
  */
 
 let input = require("fs")
@@ -9,9 +9,12 @@ let input = require("fs")
   .trim()
   .split("\n");
 
-const [n, x] = input[0].split(" ").map(Number);
-const arr = input[1].split(" ").map(Number);
+const [n, m] = input[0].split(" ").map(Number);
+let arr = new Array(n).fill(0);
 
-const filtered = arr.filter((el) => el < x);
+for (let count = 1; count <= m; count++) {
+  let [i, j, k] = input[count].split(" ").map(Number);
+  arr.fill(k, i - 1, j);
+}
 
-console.log(filtered.join(" "));
+console.log(arr.join(" "));
