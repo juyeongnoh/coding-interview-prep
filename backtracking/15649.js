@@ -3,33 +3,31 @@
  * https://www.acmicpc.net/problem/15649
  */
 
-const fs = require("fs");
-let [n, m] = fs.readFileSync("dev/stdin").toString().split(" ").map(Number);
+let [n, m] = require("fs")
+  .readFileSync("dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map(Number);
 
-let answer = "";
-let arr = [];
-for (let i = 1; i <= n; i++) arr.push(i);
 let visited = new Array(n).fill(false);
-let selected = [];
+let combo = [];
+let answer = "";
 
-function dfs(arr, depth) {
-  if (depth === m) {
-    let result = [];
-    for (let i of selected) result.push(arr[i]);
-    for (let r of result) answer += r + " ";
-    answer += "\n";
-    return;
-  }
+function dfs(depth) {
+  if (depth > m) return;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (visited[i]) continue;
-    selected.push(i);
-    visited[i] = true;
-    dfs(arr, depth + 1);
-    selected.pop();
-    visited[i] = false;
+  for (let i = 1; i <= n; i++) {
+    if (!visited[i - 1]) {
+      visited[i - 1] = true;
+      combo.push(i);
+      if (combo.length === m) answer += combo.join(" ") + "\n";
+      dfs(depth + 1);
+      combo.pop();
+      visited[i - 1] = false;
+    }
   }
 }
 
-dfs(arr, 0);
+dfs(1);
 console.log(answer);

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "이진 탐색/파라메트릭 서치.md",
+                "file": "백트래킹/N-Queen 문제.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "이진 탐색/파라메트릭 서치.md",
+                "file": "백트래킹/N-Queen 문제.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "이진 탐색/파라메트릭 서치.md",
+                "file": "백트래킹/N-Queen 문제.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "이진 탐색/파라메트릭 서치.md"
+                "file": "백트래킹/N-Queen 문제.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "621d34414ce52d91",
   "lastOpenFiles": [
-    "대동 맛지도.md",
+    "백트래킹/백트래킹 알고리즘.md",
     "이진 탐색/파라메트릭 서치.md",
+    "대동 맛지도.md",
     "이진 탐색",
     "Screenshot 2023-11-28 at 10.36.23 PM.png",
     "N-Queen.png",
@@ -162,7 +163,6 @@
     "자바스크립트 문법/BigInt.md",
     "정렬 알고리즘/선택 정렬.md",
     "정렬 알고리즘/삽입 정렬.md",
-    "백트래킹/백트래킹 알고리즘.md",
     "정렬 알고리즘/분할 정복.md",
     "정렬 알고리즘/병합 정렬.md",
     "정렬 알고리즘/버블 정렬.md",
