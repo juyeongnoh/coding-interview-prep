@@ -2,24 +2,28 @@
  * 모든 순열
  * https://www.acmicpc.net/problem/10974
  */
-let n = Number(require("fs").readFileSync("dev/stdin").toString());
-let visited = new Array(n).fill(false);
-let selected = [];
-let answer = "";
+const n = parseInt(require("fs").readFileSync("dev/stdin").toString());
 
-function recursive(depth) {
-  if (depth > n) return;
-  for (let i = 1; i <= n; i++) {
-    if (!visited[i - 1]) {
-      visited[i - 1] = true;
-      selected.push(i);
-      if (selected.length === n) answer += selected.join(" ") + "\n";
-      recursive(depth + 1);
-      visited[i - 1] = false;
-      selected.pop();
+const visited = Array.from({ length: n }).fill(false);
+const answer = [];
+
+const recursive = (num) => {
+  if (answer.length >= n) {
+    console.log(answer.join(" "));
+    return;
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (!visited[i]) {
+      visited[i] = true;
+      answer.push(i + 1);
+
+      recursive(i + 1);
+
+      visited[i] = false;
+      answer.pop();
     }
   }
-}
+};
 
-recursive(0);
-console.log(answer);
+recursive(1);
