@@ -2,34 +2,34 @@
  * N과 M (2)
  * https://www.acmicpc.net/problem/15650
  */
-
-let [n, m] = require("fs")
+const [n, m] = require("fs")
   .readFileSync("dev/stdin")
   .toString()
-  .trim()
   .split(" ")
   .map(Number);
 
+const visited = new Array(n).fill(false);
+const stack = [];
 let answer = "";
-let selected = [];
-let visited = new Array(n).fill(false);
 
-function recursive(depth) {
-  if (depth > m) return;
+const recursive = (depth) => {
+  if (depth >= m) {
+    answer += stack.join(" ") + "\n";
+    return;
+  }
 
-  for (let i = 1; i <= n; i++) {
-    if (!visited[i - 1]) {
-      visited.fill(true, 0, i);
-      selected.push(i);
-      if (selected.length === m) {
-        answer += selected.join(" ") + "\n";
-      }
+  for (let i = depth; i < n; i++) {
+    if (!visited[i]) {
+      visited.fill(true, 0, i + 1);
+      stack.push(i + 1);
       recursive(depth + 1);
-      visited.fill(false, 0, i);
-      selected.pop();
+      visited[i] = false;
+      visited.fill(false, i + 1);
+      stack.pop();
     }
   }
-}
+};
 
-recursive(1);
+recursive(0);
+
 console.log(answer);
