@@ -11,20 +11,21 @@ let [n, m] = require("fs")
   .map(Number);
 
 let answer = "";
-let selected = [];
+const stack = [];
 
-function recursive(depth) {
-  if (depth > m) {
-    answer += selected.join(" ") + "\n";
+const recursive = (num) => {
+  if (num >= m) {
+    answer += stack.join(" ") + "\n";
     return;
   }
 
-  for (let i = 1; i <= n; i++) {
-    selected.push(i);
-    recursive(depth + 1);
-    selected.pop();
+  for (let i = 0; i < n; i++) {
+    stack.push(i + 1);
+    recursive(num + 1);
+    stack.pop();
   }
-}
+};
 
-recursive(1);
+recursive(0);
+
 console.log(answer);
