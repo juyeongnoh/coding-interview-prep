@@ -2,7 +2,6 @@
  * 도영이가 만든 맛있는 음식
  * https://www.acmicpc.net/problem/2961
  */
-
 let [n, ...input] = require("fs")
   .readFileSync("dev/stdin")
   .toString()
@@ -11,34 +10,44 @@ let [n, ...input] = require("fs")
   .map((el) => el.split(" ").map(Number));
 n = n[0];
 
-let visited = new Array(n).fill(false);
-let selected = [];
-let taste = [];
+const stack = [];
+const cases = [];
+const differences = [];
 
-function recursive(depth) {
+const visited = new Array(n).fill(false);
+
+function getCases(depth) {
+  if (depth >= n) return;
+
   for (let i = 0; i < n; i++) {
     if (!visited[i]) {
-      for (let j = 0; j <= i; j++) visited[j] = true;
-      selected.push(i);
-      taste.push(calcTaste(selected));
-      recursive(depth + 1);
-      for (let j = 0; j <= i; j++) visited[j] = false;
-      selected.pop();
+      visited.fill(true, 0, i + 1);
+      stack.push(i);
+
+      cases.push([...stack]);
+
+      getCases(depth + 1);
+      stack.pop();
+      visited.fill(false, i);
     }
   }
 }
 
-function calcTaste(arr) {
-  let sourness = input[arr[0]][0];
-  let bitterness = input[arr[0]][1];
+function getDifferences(c) {
+  let sour = 1;
+  let bitter = 0;
 
-  for (let i = 1; i < arr.length; i++) {
-    sourness *= input[arr[i]][0];
-    bitterness += input[arr[i]][1];
+  for (let i = 0; i < c.length; i++) {
+    const [s, b] = input[c[i]];
+    sour *= s;
+    bitter += b;
   }
 
-  return Math.abs(sourness - bitterness);
+  differences.push(Math.abs(sour - bitter));
 }
 
-recursive(1);
-console.log(Math.min(...taste));
+getCases(0);
+
+cases.forEach((c) => getDifferences(c));
+
+console.log(Math.min(...differences));
