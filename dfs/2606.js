@@ -2,37 +2,39 @@
  * 바이러스
  * https://www.acmicpc.net/problem/2606
  */
-
-let [coms, pairs, ...input] = require("fs")
+const input = require("fs")
   .readFileSync("dev/stdin")
   .toString()
   .trim()
-  .split("\n")
-  .map((el) => (el.length > 1 ? el.split(" ").map(Number) : Number(el)));
+  .split("\n");
+const com = Number(input[0]);
 
-let graph = [];
-let visited = new Array(coms + 1).fill(false);
-let count = 0;
+input.splice(0, 2);
 
-for (let i = 0; i <= coms; i++) {
-  graph.push([]);
-}
+const visited = Array(com + 1).fill(false);
+const pairs = input.map((el) => el.split(" ").map(Number));
 
-for (const pair of input) {
-  const [node1, node2] = pair;
-  graph[node1].push(node2);
-  graph[node2].push(node1);
-}
+const graph = new Array(com + 1).fill().map(() => []);
 
-function dfs(graph, v, visited) {
+pairs.forEach((pair) => {
+  const [first, second] = pair;
+  graph[first].push(second);
+  graph[second].push(first);
+});
+
+const stack = [];
+
+function dfs(v) {
   visited[v] = true;
-  count++;
-  for (let i of graph[v]) {
+  stack.push(v);
+
+  for (const i of graph[v]) {
     if (!visited[i]) {
-      dfs(graph, i, visited);
+      dfs(i);
     }
   }
 }
 
-dfs(graph, 1, visited);
-console.log(count - 1);
+dfs(1);
+
+console.log(stack.length - 1);
