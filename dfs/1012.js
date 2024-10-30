@@ -2,61 +2,57 @@
  * 유기농 배추
  * https://www.acmicpc.net/problem/1012
  */
-
-let input = require("fs")
+const input = require("fs")
   .readFileSync("dev/stdin")
   .toString()
   .trim()
   .split("\n");
 
-const tc = Number(input.shift());
-let testCases = [];
+let tc = Number(input[0]);
+let line = 1;
 
-while (input.length !== 0) {
-  const [x, y, c] = input[0].split(" ").map(Number);
-  testCases.push(input.slice(0, c + 1));
-  input = input.slice(c + 1);
-}
-
-let count = 0;
-
-function dfs(map, x, y, visited) {
-  if (!map[x][y] || visited[x][y]) return;
-  count++;
-  visited[x][y] = true;
-
-  // 상
-  if (y !== 0) dfs(map, x, y - 1, visited);
-  // 하
-  if (y !== map[0].length - 1) dfs(map, x, y + 1, visited);
-  // 좌
-  if (x !== 0) dfs(map, x - 1, y, visited);
-  // 우
-  if (x !== map.length - 1) dfs(map, x + 1, y, visited);
-}
-
-testCases.forEach((tc) => {
-  const [x, y, c] = tc[0].split(" ").map(Number);
-  let map = Array.from(new Array(x), () => new Array(y).fill(0));
-  let visited = Array.from(new Array(x), () => new Array(y).fill(false));
-  let answer = 0;
-
-  for (let i = 1; i <= c; i++) {
-    const [x, y] = tc[i].split(" ").map(Number);
-    map[x][y] = 1;
+function dfs(graph, n, m, x, y) {
+  if (x <= -1 || x >= n || y <= -1 || y >= m) {
+    return false;
   }
 
-  for (let i = 0; i < map.length; i++) {
-    for (let j = 0; j <= map[0].length; j++) {
-      if (!visited[i][j] || map[i][j]) {
-        dfs(map, i, j, visited);
-        if (count > 0) {
-          answer++;
-          count = 0;
-        }
-      }
+  if (graph[x][y] === 1) {
+    graph[x][y] = -1;
+
+    dfs(graph, n, m, x - 1, y);
+    dfs(graph, n, m, x + 1, y);
+    dfs(graph, n, m, x, y - 1);
+    dfs(graph, n, m, x, y + 1);
+    return true;
+  }
+
+  return false;
+}
+
+while (tc--) {
+  const [m, n, k] = input[line].split(" ").map(Number);
+  let answer = 0;
+  const graph = [];
+
+  for (let i = 0; i < n; i++) {
+    graph.push(new Array(m).fill(0));
+  }
+
+  const spots = input
+    .slice(line + 1, line + k + 1)
+    .map((el) => el.split(" ").map(Number));
+
+  for (const spot of spots) {
+    const [x, y] = spot;
+    graph[y][x] = 1;
+  }
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < m; j++) {
+      if (dfs(graph, n, m, i, j)) answer++;
     }
   }
 
+  line += k + 1;
   console.log(answer);
-});
+}
