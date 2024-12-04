@@ -10,47 +10,101 @@ const input = require("fs")
   .split("\n")
   .map((line) => line.split(" ").map(Number));
 
-let answer = "";
+const graphs = [];
+let treeCount = 0;
 
-for (let i = 0, j = 1; i < input.length; i++, j++) {
+// 그래프 만들기
+for (let i = 0; i < input.length; ) {
   const [n, m] = input[i];
-
-  // [0, 0]을 만나면 종료
   if (n === 0 && m === 0) break;
 
-  // 그래프 만들기
-  let graph = Array.from(Array(n + 1), () => []);
-  let visited = new Array(n + 1).fill(false);
+  const edges = input.slice(i + 1, i + m + 1);
 
-  for (let j = i + 1; j <= i + m; j++) {
-    const [node1, node2] = input[j];
-    graph[node1].push(node2);
-    graph[node2].push(node1);
-  }
+  i += m + 1;
 
-  let treeCount = 0;
-
-  for (let j = 1; j < visited.length; j++) {
-    if (visited[j]) continue;
-    if (!isCycle(graph, visited, j, 0)) treeCount++;
-  }
-
-  if (treeCount === 0) answer += `Case ${j}: No trees.\n`;
-  else if (treeCount === 1) answer += `Case ${j}: There is one tree.\n`;
-  else answer += `Case ${j}: A forest of ${treeCount} trees.\n`;
-
-  i += m;
+  graphs.push(makeGraph(n, edges));
 }
 
-console.log(answer);
+function makeGraph(n, edges) {
+  let graph = {};
 
-function isCycle(graph, visited, v, prev) {
-  visited[v] = true;
-
-  for (let i of graph[v]) {
-    if (!visited[i]) {
-      if (isCycle(graph, visited, i, v)) return true;
-    } else if (i !== prev) return true;
+  for (let i = 1; i <= n; i++) {
+    graph[i] = [];
   }
-  return false;
+
+  for (const edge of edges) {
+    const [vertex1, vertex2] = edge;
+    graph[vertex1].push(vertex2);
+    graph[vertex2].push(vertex1);
+  }
+
+  return graph;
+}
+
+// 그래프에 트리가 몇개 존재하는지 확인하기
+for (let i = 0; i < graphs.length; i++) {
+  const count = countTree(graphs[i]);
+
+  switch (count) {
+    case 0:
+      console.log(`Case ${i + 1}: No trees.`);
+      break;
+    case 1:
+      console.log(`Case ${i + 1}: There is one tree.`);
+      break;
+    default:
+      console.log(`Case ${i + 1}: A forest of ${count} trees.`);
+      break;
+  }
+}
+
+function countTree(graph) {
+  treeCount = 0;
+
+  const nodeCount = Object.keys(graph).length;
+  const visited = Array.from({ length: nodeCount }).fill(0);
+  let countVisitedNodes = 0;
+
+  for (let i = 1; i <= nodeCount; i++) {
+    if (visited[i - 1]) continue;
+    dfs(i, graph, visited);
+
+    const visitedNodes = visited.filter((el) => el !== 0);
+
+    if (countVisitedNodes !== visitedNodes.length) {
+      treeCount++;
+      countVisitedNodes = visitedNodes.length;
+    }
+
+    if (visitedNodes.some((el) => el >= 3)) {
+      treeCount--;
+    }
+  }
+
+  return treeCount;
+}
+
+// [2, 3, 1, 3, 0, 0][(4, 6, 2, 6, 0, 0)];
+
+// 단순 visited 배열이 아니라
+// 노드의 방문 횟수를 기록하는 배열
+// 방문 횟수가 하나라도 3보다 높다면 사이클이 있는 것
+
+// 트리 세기
+
+// for 노드의 수
+// visited 배열에 값이 0이면 treeCount++
+
+// 사이클이 있으면 트리 아님
+
+// 그래프 순회
+function dfs(startNode, graph, visited) {
+  visited[startNode - 1]++;
+
+  for (const v of graph[startNode]) {
+    if (visited[v - 1]) visited[v - 1]++;
+    else {
+      dfs(v, graph, visited);
+    }
+  }
 }
