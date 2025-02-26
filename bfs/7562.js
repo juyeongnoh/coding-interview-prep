@@ -1,6 +1,7 @@
 /**
  * 나이트의 이동
  * https://www.acmicpc.net/problem/7562
+ * 완료 시간: 35분
  */
 class Queue {
   constructor() {
